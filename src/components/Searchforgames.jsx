@@ -22,13 +22,14 @@ const SearchComponent = () => {
 
   return (
     <div>
-      <input
+      <input className='searchinput'
         type="text"
         placeholder="Search for games..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <br />
+      <button className='searchgamebtn' onClick={handleSearch}>Search</button>
 
       {showModal && (
         <SearchModal results={searchResults} onClose={handleCloseModal} />

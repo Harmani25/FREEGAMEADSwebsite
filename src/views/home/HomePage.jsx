@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+/* import { useState } from "react"; */
 import {
   Banner,
   ImageSlider,
@@ -13,10 +13,12 @@ import {
   selectAllGamesStatus
 } from "../../redux/store/gameSlice";
 import { useEffect } from "react";
-import { fetchAsyncGames, fetchAsyncSearchGames } from "../../redux/utils/gameUtils";
+import { fetchAsyncGames, /* fetchAsyncSearchGames */ } from "../../redux/utils/gameUtils";
 import { STATUS } from "../../utils/status";
 import { GameList } from "../../components/game/index";
 import { Link } from "react-router-dom";
+
+/* import Search from "../../components/Anothersearchcompo"; */
 
 import {
   selectAllGenres,
@@ -32,23 +34,25 @@ import { fetchAsyncStores } from "../../redux/utils/storeUtils";
 
 import Generatesupes from "../../components/common/Supes";
 import FormPage from "../../components/FormPage";
+import SearchComponent from "../../components/Searchforgames";
 /* import SearchComponent from "../../components/Searchforgames";
 import SearchModal from "../../components/SearchModal"; */
 
 
 
+
 const HomePage = () => {
   const dispatch = useDispatch();
-  const [query, setQuery] = useState('');
+  /* const [query, setQuery] = useState(''); */
   const games = useSelector(selectAllGames);
   const gamesStatus = useSelector(selectAllGamesStatus);
   const genres = useSelector(selectAllGenres);
   const genresStatus = useSelector(selectAllGenresStatus);
   const stores = useSelector(selectAllStores);
   const storesStatus = useSelector(selectAllStoresStatus);
-  const searchResults = useSelector((state) => state.game.searchResults);
+  /* const searchResults = useSelector((state) => state.game.searchResults);
   const searchStatus = useSelector((state) => state.game.gamesStatus);
-
+ */
   useEffect(() => {
     dispatch(fetchAsyncGames());
     dispatch(fetchAsyncGenres());
@@ -58,18 +62,18 @@ const HomePage = () => {
 
  
 
-  const handleSearch = (query) => {
+  /* const handleSearch = (query) => {
     dispatch(fetchAsyncSearchGames(query));
     
-  };
+  }; */
 
-  const renderedSearchResults = searchStatus === STATUS.LOADING ? (
+ /*  const renderedSearchResults = searchStatus === STATUS.LOADING ? (
     <Preloader />
   ) : searchResults?.length > 0 ? (
     <GameList games={searchResults} />
   ) : (
     "No search results found!"
-  );
+  ); */
 
 
   const renderedPopularGames = (
@@ -85,8 +89,17 @@ const HomePage = () => {
 
   return (
     <HomeWrapper>
+
+      <section>
+      <div className="searchpanel">
+      <br />
+      <SearchComponent /> {/* Render the Search component here */}
+      {/* Other content of the homepage */}
+    </div>
+
+      </section>
       <Banner />
-      <div>
+      {/* <div>
       <input
         type="text"
         placeholder="Search for games..."
@@ -96,11 +109,11 @@ const HomePage = () => {
       <button onClick={handleSearch}>Searc</button>
 
       {renderedSearchResults}
-    </div>
+    </div> */}
       <> 
       
  
-
+      
       
       </>
 

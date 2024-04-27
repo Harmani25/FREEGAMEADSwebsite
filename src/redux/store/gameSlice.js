@@ -1,6 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import { STATUS } from "../../utils/status";
-import { fetchAsyncGameDetails, fetchAsyncGames, fetchAsyncSearchGames } from "../utils/gameUtils";
+import { apiURL } from "../../constants";
+import { API_KEY } from "../../api/api_key";
+import { fetchAsyncGameDetails, fetchAsyncGames,fetchAsyncSearchGames } from "../utils/gameUtils";
+
+export const fetchAsy = createAsyncThunk(
+    'games/search',
+    async (query) => {
+      const response = await fetch(`${apiURL.gamesURL}?${API_KEY}&search=${query}`);
+      const data = await response.json();
+      return data.results;
+    }
+  );
 
 const initialState = {
     games: [],
@@ -63,5 +74,6 @@ export const selectGamesPrevPage = (state) => state.game.games.previous;
 export const selectSingleGame = (state) => state.game.gamesSingle;
 export const selectSingleGameStatus = (state) => state.game.gamesSingleStatus;
 export const selectSearchResults = (state) => state.game.searchResults;
+export const selectSearchStatus = (state) => state.game.searchStatus;
 
 export default gameSlice.reducer;

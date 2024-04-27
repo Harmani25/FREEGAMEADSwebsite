@@ -6,6 +6,7 @@ import { MdClose } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectSidebarStatus, setSidebarOff, setSidebarOn } from '../../redux/store/sidebarSlice';
 
+
 const Navbar = () => {
   const dispatch = useDispatch();
   const sidebarStatus = useSelector(selectSidebarStatus);
@@ -19,6 +20,11 @@ const Navbar = () => {
             <button type='button' className='navbar-show-btn text-white' onClick={() => dispatch(setSidebarOn())}>
               <HiOutlineMenuAlt3 size = { 20 } />
             </button>
+
+            
+      
+      
+    
           </div>
 
           <div className={`navbar-collapse ${sidebarStatus ? "show" : " "}`}>
@@ -26,13 +32,14 @@ const Navbar = () => {
               <MdClose size = { 25 } />
             </button>
                       
+            
             <ul className='navbar-nav'>
+             
+
               <li className='nav-item'>
                 <Link to = "/" className='nav-link'>home</Link>
               </li>
-              {/* <li className='nav-item'>
-                <Link to = "/creators" className='nav-link'>Reg</Link>
-              </li> */}
+              
               <li className='nav-item'>
                 <Link to = "/stores" className='nav-link'>stores</Link>
               </li>

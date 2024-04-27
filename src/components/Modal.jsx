@@ -29,7 +29,7 @@ function BasicModal() {
             <ModalHeader>Amazing Gamer!!</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              <div> <h1> Your review has been noted</h1></div>
+              <div> <h1> Your input has been noted</h1></div>
             </ModalBody>
   
             <ModalFooter>

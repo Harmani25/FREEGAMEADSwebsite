@@ -1,34 +1,44 @@
 import {
-    RangeSlider,
-    RangeSliderTrack,
-    RangeSliderFilledTrack,
-    RangeSliderThumb,
-  } from '@chakra-ui/react'
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+} from '@chakra-ui/react'
 
-  import { Textarea } from '@chakra-ui/react'
-  
+import React from 'react'
 
-
-const Slider = () =>{
-
-  
-  return(
-
-  <div>
-    <Textarea placeholder='Here is a sample placeholder' /> <h1> 1 2 3 4 </h1>
-<RangeSlider aria-label={['min', 'max']} defaultValue={[10, 30]}>
-<RangeSliderTrack>
-  <RangeSliderFilledTrack />
-</RangeSliderTrack>
-<RangeSliderThumb index={1} />
-<RangeSliderThumb index={1} />
-</RangeSlider>
-
-</div>
+import { Flex } from '@chakra-ui/react'
+import { Slider } from '@chakra-ui/react'
+import { SliderThumb, SliderTrack,SliderFilledTrack } from '@chakra-ui/react'
 
 
+function SliderInput() {
+  const [value, setValue] = React.useState(50)
+  const handleChange = (value) => setValue(value)
+
+  return (
+    <Flex>
+      <NumberInput maxW='50px' mr='2rem' value={value} onChange={handleChange}>
+        <NumberInputField />
+        <NumberInputStepper>
+          <NumberIncrementStepper />
+          <NumberDecrementStepper />
+        </NumberInputStepper>
+      </NumberInput>
+      <Slider
+        flex='3'
+        focusThumbOnChange={false}
+        value={value}
+        onChange={handleChange}
+      >
+        <SliderTrack>
+          <SliderFilledTrack />
+        </SliderTrack>
+        <SliderThumb fontSize='sm' boxSize='15px' child={value} />
+      </Slider>
+    </Flex>
   )
 }
 
-export default Slider 
-  
+export default SliderInput

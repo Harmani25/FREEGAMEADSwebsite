@@ -1,8 +1,11 @@
 import { useFormik } from "formik";
 import { ReviewSchema } from "../../schemas";
-import Slider from "../Slider";
+
 
 import BasicModal from "../Modal";
+
+import SliderInput from "../Slider";
+import { Textarea } from "@chakra-ui/react";
 
 
 const onSubmit = async (values, actions) => {
@@ -64,10 +67,16 @@ const ReviewForm = () => {
          
         
       />
+      <br />
+      <div>
+        <p > Comment</p>
+
+      <Textarea  placeholder="Write a comment"> </Textarea>
+      </div>
 
       <div className="text-warning">
-      Comment
-      <Slider> </Slider>
+      <br />
+     <SliderInput></SliderInput>
       </div>
       {errors.email && touched.email && <p className="error">{errors.email}</p>}
       

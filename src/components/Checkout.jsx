@@ -1,4 +1,5 @@
 import { useField } from "formik";
+import GameupdatetosModal from "./Modaltwo";
 
 const Checkout = ({  ...props }) => {
   const [field, meta] = useField(props);
@@ -12,7 +13,7 @@ const Checkout = ({  ...props }) => {
           
           className={meta.touched && meta.error ? "input-error" : ""}
         />
-        <span>I accept the terms of service</span>
+        <span> <GameupdatetosModal></GameupdatetosModal> I accept the terms of service  </span>
       </div>
 
       {meta.touched && meta.error && <div className="error">{meta.error}</div>}
