@@ -5,26 +5,22 @@ import store from "./redux/store/store";
 import { ChakraProvider } from '@chakra-ui/react'
 
 
+
+
+
 function App() {
 
  
   return (
     <div className="App">
-
+    <Provider store={store}>
+      <ChakraProvider>
         
-      
-      <Provider store={ store }>
-        <ChakraProvider> 
-        <AppRouter />
-        </ChakraProvider>
-      </Provider>
-
-
-        
-     
-
-      
-    </div>
+          <AppRouter />
+  
+      </ChakraProvider>
+    </Provider>
+  </div>
   )
 }
 
