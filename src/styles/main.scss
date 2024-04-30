@@ -51,6 +51,28 @@ a, .nav-link{
     color: var(--clr-dark);
 }
 
+.heroimg{
+  border: solid 4px rgb(89, 83, 83);
+  height: 500px;
+}
+
+.heroname{
+  background-color: #841a1a;
+  font-size: 20px;
+  
+}
+
+.herostats{
+background-color: #812410;
+align-items: end;
+}
+
+.powerstats{
+  background-color: #6170dd;
+  color:#000;
+  align-items: end;
+}
+
 img{
     width: 100%;
     display: block;
@@ -86,6 +108,17 @@ img{
   padding: 0.3rem;
   
 
+}
+
+.truegamer{
+  display: flex;
+  background-color: rgb(13, 13, 12);
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  text-rendering: geometricPrecision;
+  padding: 1.2rem;
+  
 }
 
 .resultmodal{

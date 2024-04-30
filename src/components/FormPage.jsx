@@ -4,8 +4,15 @@ import { ReviewForm } from "./Forms";
 import { GameUpdateForm } from "./Forms";
 
 
+
+
+
+
+
+
 function FormPage() {
   const [view, setView] = useState("Review");
+  
   return (
     <div className="FormPage" id="Formpage">
       <nav>
@@ -13,6 +20,7 @@ function FormPage() {
           onClick={() => setView("Review")}
           style={{ color: view === "Review" ? "#fff" : "" }}
         >
+          
           Review
         </h3>
         <h3

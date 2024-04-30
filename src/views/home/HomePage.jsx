@@ -35,8 +35,11 @@ import { fetchAsyncStores } from "../../redux/utils/storeUtils";
 import Generatesupes from "../../components/common/Supes";
 import FormPage from "../../components/FormPage";
 import SearchComponent from "../../components/Searchforgames";
-/* import SearchComponent from "../../components/Searchforgames";
-import SearchModal from "../../components/SearchModal"; */
+import { SharedStateProvider } from "../../components/SharedStateContext";
+import RegisterComponent from "../../components/Registercomponent";
+import WelcomeComponent from "../../components/WelcomeComponent";
+
+
 
 
 
@@ -97,7 +100,17 @@ const HomePage = () => {
       {/* Other content of the homepage */}
     </div>
 
+   
+
       </section>
+      
+      <SharedStateProvider>
+      <div>
+        <RegisterComponent />
+        <WelcomeComponent />
+      </div>
+    </SharedStateProvider>
+      
       <Banner />
       {/* <div>
       <input
@@ -196,7 +209,13 @@ const HomePage = () => {
         </div>
       </section>
 
+      
+      
+
       <section id="Formpage">
+         
+          
+
           <FormPage
           /> 
 
