@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const supesToken = 3068745043259722;
+const supesToken = 'Yourapikeys';
 const supesUrl = `https://superheroapi.com/api.php/${supesToken}`;
 
 const HeroStats = ({ character }) => {
