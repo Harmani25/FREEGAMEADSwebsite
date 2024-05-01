@@ -1,9 +1,9 @@
-FreeGameAds - React Gaming Website
+#FreeGameAds - React Gaming Website
 Welcome to FreeGameAds, a single-source gaming website where users can explore a diverse range of games, purchase from official gaming stores, and stay updated with the latest gaming news. This README will provide an overview of the project highlights, how to get started with the project, and future development plans.
 
-Project Highlights
-Search Functionality: Users can search for their favorite games using the search feature, powered by the Rawg.io API.
-Store Page: Explore different official gaming stores to make purchases directly.
+#Project Highlights
+###Search Functionality: Users can search for their favorite games using the search feature, powered by the Rawg.io API.
+###Store Page: Explore different official gaming stores to make purchases directly.
 Games Page: Browse through various types of games and explore their details.
 Stay in the Loop: Keep updated with the latest gaming news by subscribing to the newsletter.
 Shared State: Users can share their favorite games and receive recommendations based on the shared state.
