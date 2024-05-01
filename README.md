@@ -20,7 +20,8 @@ Navigate to the project directory:
 
 Copy code
 cd FreeGameAds
-###Install the required dependencies and libraries:
+
+# Install the required dependencies and libraries:
 
 Copy code
 npm install
@@ -66,10 +67,11 @@ In the future, FreeGameAds aims to implement the following features:
 # Citations and References
 The project was developed with the help of various resources and tutorials:
 
-How to Use Redux in ReactJS with Real-Life Examples
-Redux React Tutorial: Beginner's Guide to Redux and React
-How to Use Axios with React
-Using Axios with React
-React Documentation
-Live Deployment
+https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/
+https://semaphoreci.com/blog/redux-react
+https://www.freecodecamp.org/news/how-to-use-axios-with-react/
+https://rapidapi.com/blog/axios-react-api-tutorial/
+https://legacy.reactjs.org/docs/faq-structure.html
+
+# Live Deployment
 The project is live and deployed via Netlify. You can access it at https://freegameads.netlify.app/
