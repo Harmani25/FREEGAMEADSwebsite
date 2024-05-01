@@ -69,4 +69,4 @@ How to Use Axios with React
 Using Axios with React
 React Documentation
 Live Deployment
-The project is live and deployed via Netlify. You can access it at FreeGameAds.
+The project is live and deployed via Netlify. You can access it at https://freegameads.netlify.app/
