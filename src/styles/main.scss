@@ -84,31 +84,57 @@ img{
     object-fit: cover;
 }
 
-.searchinput{
+.searchinput {
   width: 150px;
-  margin-left: 700px;
-  display:flex;
+  margin-left: 20px;
+  display: flex;
   align-items: center;
 }
 
-.searchpanel{
+
+@media (max-width: 767px) {
+  .searchinput {
+    margin-left: 10px; 
+    width: 100%; 
+  }
+}
+
+
+
+.searchpanel {
   background-color: #000;
   display: flex;
   padding: 1rem;
+  max-width: 100%;
 }
 
-.searchgamebtn{
-  
-  margin-left: 750px;
-  display:flex;
+
+@media (max-width: 767px) {
+  .searchpanel {
+    flex-direction: column; 
+  }
+}
+
+
+.searchgamebtn {
+  margin-left: 20px; 
+  display: flex;
   align-items: center;
   color: white;
-  background-color: #4299e1;
+  background-color: #991717;
   border-radius: 10px;
-  padding: 0.3rem;
-  
-
+  padding: 0.6rem;
 }
+
+
+@media (max-width: 767px) {
+  .searchgamebtn {
+    margin-left: 5px; 
+    width: 13%; 
+  }
+}
+
+
 
 .truegamer{
   display: flex;

@@ -7,9 +7,7 @@ const SearchModal = ({ results, onClose }) => {
     next: 'https://api.rawg.io/api/games?key=7a11d28dc4f24a80a20a36c5fef7dab1&page=2&search=fifa',
     previous: null,
     results: [
-      { /* item 1 */ },
-      { /* item 2 */ },
-      // More items...
+    
     ],
     user_platforms: false
   };
@@ -17,10 +15,10 @@ const SearchModal = ({ results, onClose }) => {
 
   
 
-  // Now you can iterate over the results array or access its properties as needed
+ 
   resultsArray.forEach((result, index) => {
     if (typeof resultsArray === 'object' && !Array.isArray(resultsArray)) {
-      // Handle rendering for a single item or object
+      
       // For example:
       return (
         <div className="resultmodal">
@@ -29,13 +27,13 @@ const SearchModal = ({ results, onClose }) => {
             
             <div> image : {`result ${result}`}</div>
             
-            {/* Render other properties of the single item */}
+           
           </div>
         </div>
       );
     }
     console.log(`Result ${index + 1}:`, result);
-    // You can render the results here if needed
+  
 
     if (!Array.isArray(results)) {
       return <div>No results found</div>;
@@ -47,13 +45,13 @@ const SearchModal = ({ results, onClose }) => {
         <div className="modal-content">
           <button className="close-btn" onClick={onClose}>Close</button>
           <ul>
-            {/* Iterate over each item in the results array */}
+            
             {resultsArray.map((result, count) => (
               <li key={count}>
-                {/* Access and render properties of each item */}
+              
                 <div>Name: {result.name}</div>
                 <div>Slug: {result.slug}</div>
-                {/* Render other properties as needed */}
+               
               </li>
             ))}
           </ul>

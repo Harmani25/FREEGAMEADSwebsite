@@ -96,8 +96,7 @@ const HomePage = () => {
       <section>
       <div className="searchpanel">
       <br />
-      <SearchComponent /> {/* Render the Search component here */}
-      {/* Other content of the homepage */}
+      <SearchComponent /> 
     </div>
 
    
