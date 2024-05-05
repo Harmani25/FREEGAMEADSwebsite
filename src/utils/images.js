@@ -11,6 +11,7 @@ import loader from "../assets/images/loader.svg";
 import store_image from "../assets/images/store_image.png";
 
 
+
 const sliderImages = [ img_1, img_2, img_3, img_4, img_5, img_6 ];
 
 

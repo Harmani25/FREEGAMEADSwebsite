@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import controllerbanner from '/../Finished Files/src/assets/images/controllerbanner.jpg';
+
 
 
 
@@ -10,7 +12,7 @@ import styled from 'styled-components';
 const Banner = () => {
   return (
     <BannerWrap className='d-flex align-items-center justify-content-start' style = {{
-      background:` linear-gradient(233.75deg, rgba(0, 89, 67, 0.40) 0%, rgba(15, 30, 60, 0.41) 42%), url(./src/assets/images/controllerbanner.jpg) center/cover no-repeat`
+      background:` linear-gradient(233.75deg, rgba(0, 89, 67, 0.40) 0%, rgba(15, 30, 60, 0.41) 42%), url(${controllerbanner}) center/cover no-repeat`
     }}>
       <div className='banner-content  container text-white'>
         <div className='banner-badge w-200 text-uppercase'>Welcome to FREEGAMEADS</div>
